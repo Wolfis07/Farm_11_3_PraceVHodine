@@ -63,11 +63,16 @@ public abstract class Flower {
         return chanceOfGrowth;
     }
     public int freeArea(){
-        flowers.
+        for (int i = 0; i < flowers; i++) {
+           Area += flowers.get(i).neededArea;
+        }
+        return Area;
     }
 
     public void addFlower(){
-        if ()
+        if (freeArea() < 100){
+            addFlower();
+        }
     }
     public void harvest(){
         flowers.clear();
