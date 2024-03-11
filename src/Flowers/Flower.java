@@ -1,5 +1,6 @@
 package Flowers;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class Flower {
@@ -8,11 +9,38 @@ public abstract class Flower {
     protected double price;
     protected double neededArea;
     protected double chanceOfGrowth;
+    private ArrayList<Flower> flowers = new ArrayList<>();
+    private int Area = 0;
 
-    public Flower(String name, double price, double neededArea, double chanceOfGrowth) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
+    }
+
+    public double getNeededArea() {
+        return neededArea;
+    }
+
+    public void setNeededArea(double neededArea) {
         this.neededArea = neededArea;
+    }
+
+    public double getChanceOfGrowth() {
+        return chanceOfGrowth;
+    }
+
+    public void setChanceOfGrowth(double chanceOfGrowth) {
         this.chanceOfGrowth = chanceOfGrowth;
     }
 
@@ -26,12 +54,22 @@ public abstract class Flower {
                 '}';
     }
     Random ran = new Random();
-    protected double GrowthChance(){
+    public double growthChance(){
         chanceOfGrowth = 80;
         return chanceOfGrowth;
     }
-    protected double Watering(){
+    public double watering(){
         double f = chanceOfGrowth + 100;
         return chanceOfGrowth;
+    }
+    public int freeArea(){
+        flowers.
+    }
+
+    public void addFlower(){
+        if ()
+    }
+    public void harvest(){
+        flowers.clear();
     }
 }

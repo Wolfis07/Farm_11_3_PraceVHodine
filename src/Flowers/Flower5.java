@@ -6,6 +6,6 @@ public class Flower5 extends Flower{
         name = "Horteka";
         price = 150;
         neededArea = 27;  //ha
-        chanceOfGrowth = GrowthChance();
+        chanceOfGrowth = growthChance();
     }
 }
