@@ -20,8 +20,11 @@ public abstract class Flower {
     }
     Random ran = new Random();
     protected double GrowthChance(){
-        chanceOfGrowth = 1/ ran.nextInt(20);
+        chanceOfGrowth = 1/ ran.nextInt(10);
         return chanceOfGrowth;
     }
-
+    protected double Watering(){
+        double f = chanceOfGrowth + 0.6;
+        return chanceOfGrowth;
+    }
 }
