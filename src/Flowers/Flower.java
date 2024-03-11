@@ -1,3 +1,7 @@
+package Flowers;
+
+import java.util.Random;
+
 public abstract class Flower {
 
     protected String name;
@@ -13,6 +17,11 @@ public abstract class Flower {
                 ", neededArea=" + neededArea +
                 ", chanceOfGrowth=" + chanceOfGrowth +
                 '}';
+    }
+    Random ran = new Random();
+    protected double GrowthChance(){
+        chanceOfGrowth = 1/ ran.nextInt(20);
+        return chanceOfGrowth;
     }
 
 }
