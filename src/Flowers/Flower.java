@@ -9,6 +9,13 @@ public abstract class Flower {
     protected double neededArea;
     protected double chanceOfGrowth;
 
+    public Flower(String name, double price, double neededArea, double chanceOfGrowth) {
+        this.name = name;
+        this.price = price;
+        this.neededArea = neededArea;
+        this.chanceOfGrowth = chanceOfGrowth;
+    }
+
     @Override
     public String toString() {
         return "Flower{" +
@@ -20,11 +27,11 @@ public abstract class Flower {
     }
     Random ran = new Random();
     protected double GrowthChance(){
-        chanceOfGrowth = 1/ ran.nextInt(10);
+        chanceOfGrowth = 80;
         return chanceOfGrowth;
     }
     protected double Watering(){
-        double f = chanceOfGrowth + 0.6;
+        double f = chanceOfGrowth + 100;
         return chanceOfGrowth;
     }
 }
